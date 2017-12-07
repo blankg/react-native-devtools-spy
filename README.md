@@ -7,7 +7,7 @@
 
 ### Mostly automatic installation
 
-`$ react-native link react-nativedev-tools-spy`
+`$ react-native link react-native-devtools-spy`
 
 ### Manual installation
 
