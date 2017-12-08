@@ -3,7 +3,7 @@
 
 Add this package to your react native project to get an extra "Spy" development menu option.
 Clicking the "Spy" button will turn on extra logs:
-1. All MessageQueue messages (messages going over the javascript <-> native bridge).[Currently imlemented for iOS]
+1. All MessageQueue messages (messages going over the javascript <-> native bridge).[Currently implemented for iOS]
 2. All MobX events. [Not implemented yet]
 
 ## Getting started
@@ -41,12 +41,13 @@ Clicking the "Spy" button will turn on extra logs:
 
 
 ## Usage
+Add the DevToolsSpy component to your view hierarchy:
 ```javascript
 import DevToolsSpy from 'react-native-devtools-spy';
 ...
 render() {
     return (
-      <View style={styles.container}>
+      <View>
           {__DEV__ ? <DevToolsSpy /> : null}
       </View>
     );
