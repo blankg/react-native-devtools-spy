@@ -1,19 +1,21 @@
 import React, { Component } from "react";
 import { NativeEventEmitter, NativeModules } from "react-native";
-import MessageQueue from "react-native/Libraries/Utilities/MessageQueue";
+import MessageQueue from "react-native/Libraries/BatchedBridge/MessageQueue.js";
 
-const { RNDevToolsSpy } = NativeModules;
+const { RNDevToolsSpyEventEmitter } = NativeModules;
 
 export default class DevToolsSpy extends Component {
   constructor(props) {
     super(props);
+    this.isSpyOn = false;
   }
 
   componentWillMount() {
     this.subscription = new NativeEventEmitter(
-      RNDevToolsSpy
+      RNDevToolsSpyEventEmitter
     ).addListener("toggleSpy", () => {
-      this.isSpyOn ? MessageQueue.spy(true) : MessageQueue.spy(false);
+      this.isSpyOn = !this.isSpyOn;
+      MessageQueue.spy(this.isSpyOn);
     });
   }
 

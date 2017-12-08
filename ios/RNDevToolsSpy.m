@@ -5,12 +5,6 @@
 
 @synthesize bridge = _bridge;
 
-#if __has_include(<React/RCTDevMenu.h>)
-
-RCTDevMenuItem *_devMenuItem;
-
-#endif
-
 RCT_EXPORT_MODULE()
 
 - (dispatch_queue_t)methodQueue
