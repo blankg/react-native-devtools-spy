@@ -56,8 +56,9 @@ render() {
 Run your application and open the development menu (shake/cmd+d/cmd+m).
 Click on the "Spy" menu item.
 In the console logs you will see the extra logs of all messages going over the native <-> javascript bridge, as such:
-```N->JS : RCTEventEmitter.receiveTouches(["topTouchStart",[{"target":9,"locationX":62.5,"pageY":389,"force":0,"locationY":22,"pageX":197,"identifier":1,"timestamp":190140621.128411}],[0]])
-MessageQueue.js:89 JS->N : UIManager.measure([12,33391])
-MessageQueue.js:89 JS->N : NativeAnimatedModule.createAnimatedNode([3,{"type":"value","value":1,"offset":0}])
-MessageQueue.js:89 JS->N : NativeAnimatedModule.createAnimatedNode([2,{"type":"style","style":{"opacity":3}}])
+```
+N->JS : RCTEventEmitter.receiveTouches(["topTouchStart",[{"target":9,"locationX":62.5,"pageY":389,"force":0,"locationY":22,"pageX":197,"identifier":1,"timestamp":190140621.128411}],[0]])
+JS->N : UIManager.measure([12,33391])
+JS->N : NativeAnimatedModule.createAnimatedNode([3,{"type":"value","value":1,"offset":0}])
+JS->N : NativeAnimatedModule.createAnimatedNode([2,{"type":"style","style":{"opacity":3}}])
 ```
