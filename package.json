@@ -1,7 +1,7 @@
 {
   "name": "react-native-devtools-spy",
   "version": "1.0.0",
-  "description": "",
+  "description": "Adds a Spy option to the React Native development menu",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,8 +9,12 @@
   "keywords": [
     "react-native"
   ],
-  "author": "",
-  "license": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blankg/react-native-devtools-spy.git"
+  },
+  "author": "Guy Blank",
+  "license": "MIT",
   "peerDependencies": {
     "react-native": "^0.48.1"
   }
