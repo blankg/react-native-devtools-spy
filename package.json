@@ -17,5 +17,10 @@
   "license": "MIT",
   "peerDependencies": {
     "react-native": "^0.48.1"
+  },
+  "rnpm": {
+    "commands": {
+      "postlink": "node node_modules/react-native-devtools-spy/scripts/postlink/run"
+    }
   }
 }
