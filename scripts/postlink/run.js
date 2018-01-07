@@ -25,6 +25,9 @@ var getOnCreateOverride = `
 	  }
     `;
 
+var getImports = `import com.reactlibrary.devtools.spy.SpyOptionsHandler;
+import android.os.Bundle;`;
+
 function isAlreadyOverridden(codeContents) {
 	return /@Override\s*\n\s*protected void onCreate\(\)\s*\{[\s\S]*?\}/.test(codeContents);
 }
@@ -34,6 +37,9 @@ if (mainActivityPath) {
 	if (isAlreadyOverridden(mainActivityContents)) {
 		console.log(`"onCreate" is already overridden`);
 	} else {
+		var reactActivityImport = "import com.facebook.react.ReactActivity;";
+		mainActivityContents = mainActivityContents.replace(reactActivityImport,
+			`${reactActivityImport}\n${getImports}`);
 		var mainActivityClassDeclaration = "public class MainActivity extends ReactActivity {";
 		mainActivityContents = mainActivityContents.replace(mainActivityClassDeclaration,
 			`${mainActivityClassDeclaration}\n${getOnCreateOverride}`);
