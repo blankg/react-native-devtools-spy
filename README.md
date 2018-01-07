@@ -10,11 +10,11 @@ Clicking the "Spy" button will turn on extra logs:
 
 `$ npm install react-native-devtools-spy --save`
 
-### Mostly automatic installation (iOS only)
+### Mostly automatic installation
 
 `$ react-native link react-native-devtools-spy`
 
-### Manual installation (mandatory for Android)
+### Manual installation
 
 #### Android
 
