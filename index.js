@@ -47,9 +47,10 @@ export default class DevToolsSpy extends Component {
   onToggleMobx(value) {
     if (value) {
       try {
-        !this.mobxSpy && (this.mobxSpy = require("mobx").spy);
+        const myRequire = require;
+        !this.mobxSpy && (this.mobxSpy = myRequire("mobx").spy);
       } catch (err) {
-        console.log(err);
+        console.log("Please install mobx in your project", err);
         return;
       }
       this.disposeMobxSpy = this.mobxSpy(event => {
