@@ -1,6 +1,6 @@
 {
   "name": "react-native-devtools-spy",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Adds a Spy option to the React Native development menu",
   "main": "index.js",
   "scripts": {
