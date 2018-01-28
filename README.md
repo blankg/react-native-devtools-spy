@@ -1,10 +1,10 @@
-
+[![npm version](https://badge.fury.io/js/react-native-devtools-spy.svg)](https://badge.fury.io/js/react-native-devtools-spy)
 # react-native-devtools-spy
 
 Add this package to your react native project to get an extra "Spy" development menu option.
 Clicking the "Spy" button will turn on extra logs:
 1. All MessageQueue messages (messages going over the javascript <-> native bridge).
-2. All MobX events. [Not implemented yet]
+2. All MobX events.
 
 ## Getting started
 
@@ -66,10 +66,19 @@ render() {
 ```
 Run your application and open the development menu (shake/cmd+d/cmd+m).
 Click on the "Spy" menu item.
+Toggle the "Message queue" button.
 In the console logs you will see the extra logs of all messages going over the native <-> javascript bridge, as such:
 ```
 N->JS : RCTEventEmitter.receiveTouches(["topTouchStart",[{"target":9,"locationX":62.5,"pageY":389,"force":0,"locationY":22,"pageX":197,"identifier":1,"timestamp":190140621.128411}],[0]])
 JS->N : UIManager.measure([12,33391])
 JS->N : NativeAnimatedModule.createAnimatedNode([3,{"type":"value","value":1,"offset":0}])
 JS->N : NativeAnimatedModule.createAnimatedNode([2,{"type":"style","style":{"opacity":3}}])
+```
+If you are using MobX inyour project also toggle the "MobX" button to log all MobX events, as such:
+```
+[MobX] {type: "update", object: {…}, oldValue: 1517169620887, name: "text1", newValue: 1517169740502, …}
+[MobX] {object: Reaction, type: "scheduled-reaction"}
+[MobX] {spyReportEnd: true}
+[MobX] {object: Reaction, type: "reaction", fn: ƒ, spyReportStart: true}
+[MobX] {time: 3, spyReportEnd: true}
 ```
