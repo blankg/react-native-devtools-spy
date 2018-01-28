@@ -6,6 +6,8 @@ Clicking the "Spy" button will turn on extra logs:
 1. All MessageQueue messages (messages going over the javascript <-> native bridge).
 2. All MobX events.
 
+![](https://media.giphy.com/media/3o6nUVbZSX54Mo67NS/giphy.gif)
+
 ## Getting started
 
 `$ npm install react-native-devtools-spy --save`
