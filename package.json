@@ -16,7 +16,7 @@
   "author": "Guy Blank",
   "license": "MIT",
   "peerDependencies": {
-    "react-native": "^0.48.1"
+    "react-native": ">=0.50.0"
   },
   "rnpm": {
     "commands": {
